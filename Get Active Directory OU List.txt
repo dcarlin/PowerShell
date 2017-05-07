@@ -1,0 +1,2 @@
+Get-ADObject -Filter { ObjectClass -eq 'organizationalunit' } | Out-File C:\Users\dcarlin\Desktop\OrganizationalUnits.txt
+Get-ADObject -Filter { ObjectClass -eq 'organizationalunit' } | measure | Out-File -append C:\Users\dcarlin\Desktop\OrganizationalUnits.txt

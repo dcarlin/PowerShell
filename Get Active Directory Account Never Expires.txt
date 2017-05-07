@@ -1,0 +1,1 @@
+Search-ADAccount -UsersOnly -PasswordNeverExpires | Get-ADUser -Properties Name, LastLogonDate | Select Name, LastLogonDate | Export-Csv C:\Users\dcarlin\Desktop\AccountNeverExpires.csv -NoTypeInformation

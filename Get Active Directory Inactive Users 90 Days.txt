@@ -1,0 +1,4 @@
+#Search-ADAccount -UsersOnly -AccountInactive -TimeSpan 60 | ?{$_.enabled -eq $True} | Get-ADUser -Properties Name | Select Name | Out-File C:\Users\dcarlin\Desktop\60DayInactiveAccts.txt
+#Search-ADAccount -UsersOnly -AccountInactive -TimeSpan 60 | ?{$_.enabled -eq $True} | Get-ADUser -Properties Name | Select Name | measure | Out-File -append C:\Users\dcarlin\Desktop\60DayInactiveAccts.txt
+
+Search-ADAccount -AccountInactive -TimeSpan 90.00:00:00 -UsersOnly | Select -Property Name,LastLogonDate | Export-CSV C:\Users\dcarlin\Desktop\InactiveAccounts.csv

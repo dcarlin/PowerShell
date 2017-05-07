@@ -1,0 +1,1 @@
+Search-ADAccount -UsersOnly -AccountExpired | Get-ADUser -Properties Name, DistinguishedName, LastLogonDate | Select Name, DistinguishedName, LastLogonDate | Export-CSV C:\Users\dcarlin\Desktop\AccountExpired.csv -NoTypeInformation
